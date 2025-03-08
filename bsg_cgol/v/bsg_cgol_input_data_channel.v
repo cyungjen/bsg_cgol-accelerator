@@ -16,7 +16,9 @@ module bsg_cgol_input_data_channel #(
     ,output                            v_o
     ,input                             ready_i
   );
-
+  // always_ff @(posedge clk_i) begin
+  //   $display("Time %0t " , $time);
+  // end
   if ((num_total_cells_lp+game_length_width_lp) >= 64) begin
     localparam sipo_els_lp = `BSG_CDIV(num_total_cells_lp+game_length_width_lp, 64);
 
@@ -56,5 +58,5 @@ module bsg_cgol_input_data_channel #(
     assign data_o = data_i[game_length_width_lp+:num_total_cells_lp];
     assign frames_o = data_i[game_length_width_lp-1:0];
   end
-
+ 
 endmodule

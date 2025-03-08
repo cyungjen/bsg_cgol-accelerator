@@ -4,10 +4,11 @@
 # Many constraints can be written directly into the Hammer config files. However, 
 # you may manually define constraints here as well.
 #
-
-set CORE_CLOCK_PERIOD      10
-set IO_MASTER_CLOCK_PERIOD 20
-
+# for 32x32
+# set CORE_CLOCK_PERIOD      6.8 
+# set IO_MASTER_CLOCK_PERIOD 14.3
+set CORE_CLOCK_PERIOD      9
+set IO_MASTER_CLOCK_PERIOD 14.3
 # << arguments >>
 # bsg_chip_timing_constraint
 #     [package

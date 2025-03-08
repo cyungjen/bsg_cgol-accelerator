@@ -12,7 +12,13 @@ module bsg_cgol_cell_array #(
   );
 
   logic [0:board_width_p+1][0:board_width_p+1] cells_n; // One per cell, plus a boundary on all edges
+  // logic [3:0] en_i_row;
 
+  // // 4 Buffer to reduce Fanout of en_i
+  // sky130_fd_sc_hd__buf_16 en_lo_buf0 (.A(en_i), .X(en_i_row[0]));
+  // sky130_fd_sc_hd__buf_16 en_lo_buf1 (.A(en_i), .X(en_i_row[1]));
+  // sky130_fd_sc_hd__buf_16 en_lo_buf2 (.A(en_i), .X(en_i_row[2]));
+  // sky130_fd_sc_hd__buf_16 en_lo_buf3 (.A(en_i), .X(en_i_row[3]));
   // Top boundary
   assign cells_n[0] = '0;
 

@@ -24,14 +24,17 @@ module  bsg_test_node_client #(parameter ring_width_p="inv"
   assign data_li = data_i[74:0];
   assign data_o  = { 4'(client_id_p), data_lo };
 
+  // always_ff @(posedge clk_i) begin
+  //   $display("Time %0t: bsg_test_node_client data_li=%h, v_i=%b", $time, data_li, v_i);
+  // end
   /** INSTANTIATE NODE 0 **/
   if ( client_id_p == 0 ) begin
 
     bsg_cgol #(
-      //  .board_width_p(32)
-      // ,.max_game_length_p(1000)
-       .board_width_p(3)
-      ,.max_game_length_p(1)
+       .board_width_p(80)
+      ,.max_game_length_p(1000)
+      //  .board_width_p(3)
+      // ,.max_game_length_p(1)
     ) cgol_inst(
        .clk_i(clk_i)
       ,.reset_i(reset_i)

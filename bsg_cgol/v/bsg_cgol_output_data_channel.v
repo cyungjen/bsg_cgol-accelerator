@@ -13,7 +13,10 @@ module bsg_cgol_output_data_channel #(
     ,output                            v_o
     ,input                             yumi_i
   );
-
+  // always_ff @(posedge clk_i) begin
+  //   if(v_i)
+  //     $display("Time %0t: bsg_cgol_output_data_channel data_i=%h, data_o=%h, v_i=%b", $time, data_i, data_o,v_i);
+  // end
   if (num_total_cells_lp >= 64) begin
     localparam piso_els_lp = `BSG_CDIV(num_total_cells_lp, 64);
 
