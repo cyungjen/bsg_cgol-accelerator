@@ -32,7 +32,7 @@ The accelerator consists of multiple modules that work together to efficiently c
 ### 4. **Control Unit (`cgol_ctrl.sv`)**
    - Controls the update process and synchronizes data flow between input, cell array, and output.
    - Ensures correct sequencing of cell updates and manages `update_i` and `en_i` signals.
-
+![Top level Accelerator Architecture](architecture.png)
 ## Performance Analysis
 - The design is compared against a Python-based implementation.
 - Critical path delay and scaling effects are analyzed for different board sizes.
