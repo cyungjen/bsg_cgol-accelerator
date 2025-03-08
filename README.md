@@ -35,9 +35,11 @@ The accelerator consists of multiple modules that work together to efficiently c
    - Ensures correct sequencing of cell updates and manages `update_i` and `en_i` signals.
 ### 5. **Demo**
 ##gmae size 32x32:
+
 ![32x32](game_4_32x32_100.gif)
 
 ##gmae size 64x64:
+
 ![64x64](game_4_64x64_100.gif)
 
 ## Performance Analysis
