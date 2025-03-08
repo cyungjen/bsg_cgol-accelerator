@@ -13,6 +13,7 @@ Conway's Game of Life is a cellular automaton where each cell on a 2D grid evolv
 Each update to the board is computed in discrete time steps based on these rules.
 
 ## Design Architecture
+![Top level Accelerator Architecture](architecture.png)
 The accelerator consists of multiple modules that work together to efficiently compute the next state of the board.
 
 ### 1. **Cell Array (`bsg_cgol_cell_array.sv`)**
@@ -32,7 +33,7 @@ The accelerator consists of multiple modules that work together to efficiently c
 ### 4. **Control Unit (`cgol_ctrl.sv`)**
    - Controls the update process and synchronizes data flow between input, cell array, and output.
    - Ensures correct sequencing of cell updates and manages `update_i` and `en_i` signals.
-![Top level Accelerator Architecture](architecture.png)
+
 ## Performance Analysis
 - The design is compared against a Python-based implementation.
 - Critical path delay and scaling effects are analyzed for different board sizes.
